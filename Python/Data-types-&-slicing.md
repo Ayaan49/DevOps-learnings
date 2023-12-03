@@ -40,7 +40,7 @@ Mango and lion are the keys and the rest are values.
 
 In Python, slicing is a technique used to extract a portion of a sequence (such as a string, list, tuple, or other iterable) by specifying a range of indices. Slicing allows you to create a new sequence containing elements from the original sequence without modifying the original sequence.
 
-![image](https://www.notion.so/Slicing-d1e065c4f3cf4d00b7a7142c2dbcb4b0?pvs=4#05c2076c28c547ed8c6f7def22c97601)
+![image](This PC/Downloads/slicing.png)
 
 - The first element is inclusive and the last element is exclusive.
 - Slicing with a step:
