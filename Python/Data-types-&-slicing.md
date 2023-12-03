@@ -16,7 +16,7 @@ b = ([1,4], [3,0], [9,5]) #lists inside tuple
 ```
 - The elements inside a tuple are immutable but if the elements inside that element are mutable then it can be changed:
 
-![image](https://www.notion.so/Data-types-db151d068b4a47afa1104c13b0700a46?pvs=4#f1e608780f4247a996545dcbb459aa8e)
+![image](C:\Users\AYAAN BORDOLOI\Downloads\tuple.png)
 
 3. Sets: Same as in maths. The duplicate values are removed. They are unordered pairs.
 
