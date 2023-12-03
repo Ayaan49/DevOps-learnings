@@ -55,4 +55,4 @@ print(subset)
 ```
 - Reversing through slicing:
 
-![image](https://www.notion.so/Slicing-d1e065c4f3cf4d00b7a7142c2dbcb4b0?pvs=4#9719360dd1f4421daeb13feff46425e8)
+![image](C:\Users\AYAAN BORDOLOI\DevOps-learnings\pics\reverse.png)
