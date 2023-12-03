@@ -55,4 +55,4 @@ print(subset)
 ```
 - Reversing through slicing:
 
-![image](pics\reverse.png)
+![image](reverse.png)
