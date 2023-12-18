@@ -1,8 +1,10 @@
 # Introduction:
 
-Kubernetes, also known as K8s, is an open-source system for automating deployment, scaling, and management of containerized applications.
+[Kubernetes](https://kubernetes.io/), also known as K8s, is an open-source system for automating deployment, scaling, and management of containerized applications.
 
 ## Cluster Architecture:
+
+![k8's architecture](https://github.com/Ayaan49/DevOps-learnings/assets/64208057/1b5bbfaa-42e2-4bbc-907b-dff4c4a9138c)
 
 K8s cluster consists of two types of nodes:
 
@@ -22,10 +24,10 @@ It consists of the following:
 
 It consists of the following:
 
---> Kubelet
---> Kubeproxy
---> CRI (Container Runtime Interface)
---> CNI (Cluster Network Interface)
+- Kubelet
+- Kubeproxy
+- CRI (Container Runtime Interface)
+- CNI (Cluster Network Interface)
 
 ## Pod creation workflow:
 
