@@ -6,7 +6,7 @@ A pod is the smallest deployable unit in Kubernetes that represents a single ins
 
 A container is a single unit. However, a pod can contain more than one container. You can think of pods as a box that can hold one or more containers together.
 
-## POD YAML:
+### POD YAML:
 
 Pod is a native Kubernetes Object and if you want to create a pod, you need to declare the pod requirements in YAML format.
 
@@ -16,7 +16,7 @@ Let’s take a look at the Kubernetes pod object:
 
 ![pod-yml](https://github.com/Ayaan49/DevOps-learnings/assets/64208057/ac33d1b3-bee8-423d-9f96-f9f68878e55e)
 
-## Creating a POD:
+### Creating a POD:
 
 Let’s see how we can create a pod using the YAML manifest-
 
@@ -40,7 +40,7 @@ spec:
 Now, to deploy the manifest, you need to execute the following kubectl command with the file name. 
  `kubectl create -f pod.yaml`
 
-## Confirm your pod creation:
+### Confirm your pod creation:
 
 - You can get the status of the deployed pod with-
 
