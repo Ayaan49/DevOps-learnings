@@ -1,0 +1,3 @@
+## Deployments:
+
+A Deployment provides declarative updates for Pods and ReplicaSets. It is a Kubernetes object that comes higher in the hierarchy. It provides us with the capability to update the underlying instances seamlessly using rolling updates, Android changes and pause & resume changes as required.
