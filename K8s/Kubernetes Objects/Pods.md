@@ -42,7 +42,7 @@ Now, to deploy the manifest, you need to execute the following kubectl command w
 
 ## Confirm your pod creation:
 
-- You can get the status of the deployed pod kubectl.
+- You can get the status of the deployed pod with-
 
   `kubectl get pods`
 
