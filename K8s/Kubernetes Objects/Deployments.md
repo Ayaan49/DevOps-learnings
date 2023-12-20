@@ -1,0 +1,43 @@
+## Deployments:
+
+A [Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) provides declarative updates for Pods and ReplicaSets. It is a Kubernetes object that comes higher in the hierarchy. It provides us with the capability to update the underlying instances seamlessly using rolling updates, Android changes and pause & resume changes as required.
+
+![dplymnt](https://github.com/Ayaan49/DevOps-learnings/assets/64208057/9a2e893c-6cbc-40ab-8752-809ec4fd64bc)
+
+### Creating a Deployment:
+
+- First, create a deployment definition file i.e the YAML file with the contents.
+- It is the same as the `ReplicaSet` file where we replace the `kind` with `Deployment`.
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+  labels:
+     app: my-app
+     type: front-end
+
+spec:
+  template:
+
+    metadata:
+      name: myapp-pod
+      labels:
+        app: my-app
+        type: front-end
+    spec:
+      containers:
+      - name: my-container
+        image: my-image:latest
+replicas: 3
+selector:
+  matchLabels:
+    type: front-end
+```
+- Once the file is created, execute `kubectl create -f file.yml` to create the deployment.
+- To check if created or not, execute `kubectl get deployments`
+- ReplicaSet is created in the name of the deployment, execute `kubectl get replicaset`, you will see ReplicaSet in the name of deployment.
+- To see all the objects created at once, execute `kubectl get all`.
+
+![dplymnt2](https://github.com/Ayaan49/DevOps-learnings/assets/64208057/ff705985-648b-4c28-a4d4-b668e2fe73de)
