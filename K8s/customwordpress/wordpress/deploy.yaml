@@ -1,0 +1,51 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wordpress
+spec:
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  replicas: 1
+  selector:
+    matchLabels:
+      role: wordpress
+  template:
+    metadata:
+      labels:
+        role: wordpress
+    spec:
+      terminationGracePeriodSeconds: 30
+      containers:
+        - name: wordpress
+          image: cloudgenius/wordpress:6.4.3
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+              protocol: TCP
+          env:
+            - name: WORDPRESS_DB_HOST
+              value: mysql
+            - name: WORDPRESS_DB_USER
+              value: root
+            - name: WORDPRESS_DB_PASSWORD
+              value: password
+            - name: WORDPRESS_DB_NAME
+              value: wordpress
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            successThreshold: 1
+          volumeMounts:
+            - name: wordpressfiles
+              mountPath: /var/www/html/wp-content
+      volumes:
+        - name: wordpressfiles
+          persistentVolumeClaim:
+            claimName: wordpressfiles
